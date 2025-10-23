@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Radiohead - Unofficial Fan Site</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            color: #e4e4e4;
+            line-height: 1.6;
+        }
+
+        header {
+            background: linear-gradient(to right, #0f3460, #16213e);
+            padding: 2rem;
+            text-align: center;
+            border-bottom: 3px solid #e94560;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+        }
+
+        h1 {
+            font-size: 3rem;
+            color: #e94560;
+            text-transform: uppercase;
+            letter-spacing: 4px;
+            margin-bottom: 0.5rem;
+        }
+
+        .subtitle {
+            color: #a0a0a0;
+            font-size: 1.1rem;
+        }
+
+        nav {
+            background: #16213e;
+            padding: 1rem;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.3);
+        }
+
+        nav a {
+            color: #e4e4e4;
+            text-decoration: none;
+            padding: 0.5rem 1.5rem;
+            margin: 0 0.5rem;
+            border-radius: 5px;
+            transition: all 0.3s;
+        }
+
+        nav a:hover {
+            background: #e94560;
+            color: white;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        section {
+            margin: 3rem 0;
+            padding: 2rem;
+            background: rgba(22, 33, 62, 0.6);
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+        }
+
+        h2 {
+            color: #e94560;
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+            border-bottom: 2px solid #e94560;
+            padding-bottom: 0.5rem;
+        }
+
+        .band-members {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .member {
+            background: rgba(15, 52, 96, 0.8);
+            padding: 1.5rem;
+            border-radius: 8px;
+            border: 2px solid #0f3460;
+            transition: transform 0.3s, border-color 0.3s;
+        }
+
+        .member:hover {
+            transform: translateY(-5px);
+            border-color: #e94560;
+        }
+
+        .member h3 {
+            color: #e94560;
+            margin-bottom: 0.5rem;
+        }
+
+        .member .role {
+            color: #a0a0a0;
+            font-style: italic;
+            margin-bottom: 1rem;
+        }
+
+        .concert-gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .concert-img {
+            width: 100%;
+            height: 250px;
+            background: linear-gradient(135deg, #0f3460, #e94560);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.2rem;
+            text-align: center;
+            padding: 1rem;
+        }
+
+        .songs {
+            display: grid;
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+
+        .song {
+            background: rgba(15, 52, 96, 0.8);
+            padding: 1.5rem;
+            border-radius: 8px;
+            border-left: 4px solid #e94560;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: background 0.3s;
+        }
+
+        .song:hover {
+            background: rgba(15, 52, 96, 1);
+        }
+
+        .song-info h3 {
+            color: #e94560;
+            margin-bottom: 0.3rem;
+        }
+
+        .song-info .album {
+            color: #a0a0a0;
+            font-size: 0.9rem;
+        }
+
+        .spotify-link {
+            background: #1DB954;
+            color: white;
+            padding: 0.7rem 1.5rem;
+            border-radius: 25px;
+            text-decoration: none;
+            transition: background 0.3s;
+            font-weight: bold;
+        }
+
+        .spotify-link:hover {
+            background: #1ed760;
+        }
+
+        footer {
+            background: #0f3460;
+            text-align: center;
+            padding: 2rem;
+            margin-top: 3rem;
+            border-top: 3px solid #e94560;
+        }
+
+        footer p {
+            color: #a0a0a0;
+        }
+
+        .author {
+            color: #e94560;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Radiohead</h1>
+        <p class="subtitle">Unofficial Fan Website</p>
+    </header>
+
+    <nav>
+        <a href="#about">About</a>
+        <a href="#members">Band Members</a>
+        <a href="#concerts">Concerts</a>
+        <a href="#music">Popular Songs</a>
+    </nav>
+
+    <div class="container">
+        <section id="about">
+            <h2>About Radiohead</h2>
+            <p>Radiohead are an English rock band formed in Abingdon, Oxfordshire, in 1985. The band consists of Thom Yorke, brothers Jonny and Colin Greenwood, Ed O'Brien, and Philip Selway. They have worked with producer Nigel Godrich and cover artist Stanley Donwood since 1994.</p>
+            <p style="margin-top: 1rem;">Known for their experimental approach to rock music, Radiohead have released critically acclaimed albums including "OK Computer," "Kid A," and "In Rainbows." Their music has evolved from alternative rock to incorporate electronic music, classical music, and jazz influences.</p>
+        </section>
+
+        <section id="members">
+            <h2>Band Members</h2>
+            <div class="band-members">
+                <div class="member">
+                    <h3>Thom Yorke</h3>
+                    <p class="role">Lead Vocals, Guitar, Piano</p>
+                    <p>The primary lyricist and lead vocalist of Radiohead, Thom Yorke's distinctive voice and introspective lyrics have become the band's signature. He also pursues solo projects and collaborations.</p>
+                </div>
+                <div class="member">
+                    <h3>Jonny Greenwood</h3>
+                    <p class="role">Lead Guitar, Keyboards</p>
+                    <p>Known for his innovative guitar work and electronic experimentation, Jonny is also an accomplished film composer, having scored multiple films for director Paul Thomas Anderson.</p>
+                </div>
+                <div class="member">
+                    <h3>Colin Greenwood</h3>
+                    <p class="role">Bass Guitar</p>
+                    <p>Jonny's older brother, Colin provides the rhythmic foundation with his bass playing. His melodic bass lines are integral to Radiohead's sound.</p>
+                </div>
+                <div class="member">
+                    <h3>Ed O'Brien</h3>
+                    <p class="role">Guitar, Backing Vocals</p>
+                    <p>Ed's guitar work and backing vocals add texture and depth to Radiohead's music. He also released his debut solo album "Earth" in 2020.</p>
+                </div>
+                <div class="member">
+                    <h3>Philip Selway</h3>
+                    <p class="role">Drums, Percussion</p>
+                    <p>The band's drummer since its formation, Philip's precise and creative drumming style has been crucial to Radiohead's evolution. He has also released solo albums.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="concerts">
+            <h2>Concert Moments</h2>
+            <div class="concert-gallery">
+                <div class="concert-img">
+                    📷 Replace with actual concert photo #1
+                </div>
+                <div class="concert-img">
+                    📷 Replace with actual concert photo #2
+                </div>
+                <div class="concert-img">
+                    📷 Replace with actual concert photo #3
+                </div>
+                <div class="concert-img">
+                    📷 Replace with actual concert photo #4
+                </div>
+                <div class="concert-img">
+                    📷 Replace with actual concert photo #5
+                </div>
+                <div class="concert-img">
+                    📷 Replace with actual concert photo #6
+                </div>
+            </div>
+        </section>
+
+        <section id="music">
+            <h2>Popular Songs</h2>
+            <div class="songs">
+                <div class="song">
+                    <div class="song-info">
+                        <h3>Creep</h3>
+                        <p class="album">Pablo Honey (1993)</p>
+                    </div>
+                    <a href="https://open.spotify.com/track/70LcF31zb1H0PyJoS1Sx1r" target="_blank" class="spotify-link">Listen on Spotify</a>
+                </div>
+                <div class="song">
+                    <div class="song-info">
+                        <h3>Karma Police</h3>
+                        <p class="album">OK Computer (1997)</p>
+                    </div>
+                    <a href="https://open.spotify.com/track/63OQupATfueTdZMWTxW03A" target="_blank" class="spotify-link">Listen on Spotify</a>
+                </div>
+                <div class="song">
+                    <div class="song-info">
+                        <h3>No Surprises</h3>
+                        <p class="album">OK Computer (1997)</p>
+                    </div>
+                    <a href="https://open.spotify.com/track/6b2RcmUt1g9N9mQ3CbjX2Y" target="_blank" class="spotify-link">Listen on Spotify</a>
+                </div>
+                <div class="song">
+                    <div class="song-info">
+                        <h3>Paranoid Android</h3>
+                        <p class="album">OK Computer (1997)</p>
+                    </div>
+                    <a href="https://open.spotify.com/track/6LgJvl0Xdtc73RJ1mmpotq" target="_blank" class="spotify-link">Listen on Spotify</a>
+                </div>
+                <div class="song">
+                    <div class="song-info">
+                        <h3>Everything In Its Right Place</h3>
+                        <p class="album">Kid A (2000)</p>
+                    </div>
+                    <a href="https://open.spotify.com/track/2OPbYk8F0YKEj6Aw8xEYya" target="_blank" class="spotify-link">Listen on Spotify</a>
+                </div>
+                <div class="song">
+                    <div class="song-info">
+                        <h3>Fake Plastic Trees</h3>
+                        <p class="album">The Bends (1995)</p>
+                    </div>
+                    <a href="https://open.spotify.com/track/73CKjW73OLdZKPM0dTQsoq" target="_blank" class="spotify-link">Listen on Spotify</a>
+                </div>
+                <div class="song">
+                    <div class="song-info">
+                        <h3>Street Spirit (Fade Out)</h3>
+                        <p class="album">The Bends (1995)</p>
+                    </div>
+                    <a href="https://open.spotify.com/track/4pPuDoGpLdFaFfEP2wHfWH" target="_blank" class="spotify-link">Listen on Spotify</a>
+                </div>
+                <div class="song">
+                    <div class="song-info">
+                        <h3>Nude</h3>
+                        <p class="album">In Rainbows (2007)</p>
+                    </div>
+                    <a href="https://open.spotify.com/track/4qrJPHOqt8JKROiNKJFaXr" target="_blank" class="spotify-link">Listen on Spotify</a>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <p>Unofficial Radiohead Fan Website</p>
+        <p>Created by <span class="author">Jadyn Stern</span></p>
+        <p style="margin-top: 1rem; font-size: 0.9rem;">This is a fan-made website and is not affiliated with Radiohead or their management.</p>
+    </footer>
+</body>
+</html>
